@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeView extends StatelessWidget{
   const HomeView({super.key});
@@ -19,12 +20,16 @@ class HomeView extends StatelessWidget{
       body: Center(
         child: Column(
           children: [
-            ElevatedButton(onPressed: (){},
-                child: const Text('HomeView')),
+            ElevatedButton(
+                onPressed: (){
+                  context.pushNamed('login_view');
+                },
+                child:const Text('Ir a login')),
             Text ('Hi',style:Theme.of(context).textTheme.titleSmall),
             Text ('ola',style:Theme.of(context).textTheme.bodyMedium),
             Text ('Hola',style:Theme.of(context).textTheme.bodyLarge),
           ],
+
         ) ),
     );
   }
