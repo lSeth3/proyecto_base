@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
 class HomeView extends StatelessWidget{
@@ -20,14 +21,21 @@ class HomeView extends StatelessWidget{
       body: Center(
         child: Column(
           children: [
+            SvgPicture.asset('assets/images/Logo.svg',
+              alignment: Alignment.topCenter,
+              width: 200,
+            ),
+
             ElevatedButton(
                 onPressed: (){
                   context.pushNamed('login_view');
                 },
                 child:const Text('Ir a login')),
-            Text ('Hi',style:Theme.of(context).textTheme.titleSmall),
-            Text ('ola',style:Theme.of(context).textTheme.bodyMedium),
-            Text ('Hola',style:Theme.of(context).textTheme.bodyLarge),
+            ElevatedButton(
+                onPressed: (){
+                  context.pushNamed('register_view');
+                },
+                child:const Text('Ir a registro'))
           ],
 
         ) ),
