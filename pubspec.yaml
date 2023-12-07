@@ -43,6 +43,7 @@ dependencies:
   flutter_native_splash: ^2.3.6
   flutter_launcher_icons: ^0.13.1
   flutter_svg: ^2.0.9
+  supabase_flutter: ^1.10.25
 
 dev_dependencies:
   flutter_test:
@@ -75,6 +76,7 @@ flutter:
     - assets/images/
     - assets/fonts/
     - assets/icons/
+    - assets/global/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
